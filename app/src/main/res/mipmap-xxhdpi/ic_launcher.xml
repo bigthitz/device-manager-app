@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
-    <background>
-        <shape>
-            <gradient
-                android:startColor="#667eea"
-                android:endColor="#764ba2"
-                android:angle="135" />
-        </shape>
-    </background>
-    <foreground>
-        <inset
-            android:drawable="@drawable/ic_launcher_foreground"
-            android:inset="25%" />
-    </foreground>
-</adaptive-icon>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <path
+        android:fillColor="#667eea"
+        android:pathData="M24,24m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0" />
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M14,16h20c1.5,0,2.5,1,2.5,2.5v11c0,1.5,-1,2.5,-2.5,2.5H14c-1.5,0,-2.5,-1,-2.5,-2.5v-11C11.5,17,12.5,16,14,16z" />
+
+    <path
+        android:fillColor="#667eea"
+        android:pathData="M17,19h14c0.5,0,1,0.5,1,1v8c0,0.5,-0.5,1,-1,1H17c-0.5,0,-1,-0.5,-1,-1v-8C16,19.5,16.5,19,17,19z" />
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,34h4c0.3,0,0.5,0.2,0.5,0.5S22.3,35,22,35h-4c-0.3,0,-0.5,-0.2,-0.5,-0.5S21.7,34,22,34z" />
+</vector>
