@@ -21,25 +21,20 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
-
-      - name: Grant execute permission for gradlew
-        run: |
-          if [ ! -f gradlew ]; then
-            gradle wrapper --gradle-version 8.4
-          fi
-          chmod +x gradlew
+        with:
+          gradle-version: wrapper
 
       - name: Build Release APK
         run: ./gradlew assembleRelease --no-daemon
 
-      - name: Upload APK
+      - name: Upload Release APK
         uses: actions/upload-artifact@v4
         with:
           name: device-manager-release
           path: app/build/outputs/apk/release/app-release-unsigned.apk
           if-no-files-found: error
 
-      - name: Debug APK (for PR)
+      - name: Build Debug APK
         run: ./gradlew assembleDebug --no-daemon
 
       - name: Upload Debug APK
